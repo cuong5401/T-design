@@ -1,0 +1,18 @@
+.kiosk-viewport {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--color-page);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kiosk-viewport__scaler {
+  position: relative;
+  width: var(--app-design-width);
+  height: var(--app-design-height);
+  flex: 0 0 auto;
+  transform: scale(var(--app-scale));
+  transform-origin: center center;
+}

@@ -1,0 +1,87 @@
+.dry-time {
+  max-width: var(--size-dry-panel-max);
+  margin: var(--space-10xl) auto 0;
+  background: var(--color-surface);
+  border: var(--border-width-strong) solid var(--color-border-card);
+  box-shadow: var(--shadow-subtle);
+  padding: var(--space-7xl);
+  text-align: center;
+}
+
+.dry-time__title {
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-heavy);
+  color: var(--color-heading);
+  margin-bottom: var(--space-3xl);
+}
+
+.dry-time__control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3xl);
+  margin: var(--space-3xl) 0;
+}
+
+.dry-time__step-button {
+  width: var(--size-dry-button);
+  height: var(--size-dry-button);
+  border: var(--border-width-strong) solid var(--color-dry);
+  background: var(--color-surface);
+  color: var(--color-dry);
+  font-size: var(--font-size-10xl);
+  font-weight: var(--font-weight-heavy);
+  line-height: var(--line-height-tight);
+  cursor: pointer;
+  box-shadow: var(--shadow-subtle);
+}
+
+.dry-time__step-button:disabled {
+  border-color: var(--color-border-disabled);
+  color: var(--color-border-card-divider);
+  background: var(--color-control-muted);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.dry-time__display {
+  min-width: var(--size-dry-display-min);
+  padding: var(--space-xl) var(--space-5xl);
+  border: var(--border-width-strong) solid var(--color-dry);
+  background: var(--color-panel-orange);
+}
+
+.dry-time__minutes {
+  font-size: var(--font-size-12xl);
+  font-weight: var(--font-weight-heavy);
+  color: var(--color-text-strong);
+  line-height: var(--line-height-tight);
+}
+
+.dry-time__price {
+  margin-top: var(--space-md);
+  font-size: var(--font-size-8xl);
+  font-weight: var(--font-weight-heavy);
+  color: var(--color-dry-text);
+  line-height: var(--line-height-tight);
+}
+
+.dry-time__note {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-label);
+  margin-top: var(--space-xl);
+}
+
+.dry-time__confirm {
+  min-width: var(--size-dry-confirm-min-width);
+  height: var(--size-dry-confirm-height);
+  margin-top: var(--space-5xl);
+  border: var(--border-width-strong) solid var(--color-primary);
+  background: var(--color-surface);
+  color: var(--color-primary);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-heavy);
+  cursor: pointer;
+  box-shadow: var(--shadow-subtle);
+}

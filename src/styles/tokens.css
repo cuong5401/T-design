@@ -1,0 +1,228 @@
+:root {
+    --app-design-width: 1280px;
+    --app-design-height: 800px;
+    --app-scale: 1;
+    --font-family-base: Arial, Helvetica, sans-serif;
+    --font-size-root: 20px;
+    --font-size-2xs: 0.6rem;
+    --font-size-xs: 0.6875rem;
+    --font-size-sm: 0.75rem;
+    --font-size-md: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.0625rem;
+    --font-size-xl: 1.125rem;
+    --font-size-2xl: 1.25rem;
+    --font-size-3xl: 1.3125rem;
+    --font-size-4xl: 1.375rem;
+    --font-size-course-body: 1.4rem;
+    --font-size-5xl: 1.5rem;
+    --font-size-6xl: 1.625rem;
+    --font-size-7xl: 1.75rem;
+    --font-size-8xl: 2rem;
+    --font-size-9xl: 2.125rem;
+    --font-size-10xl: 2.5rem;
+    --font-size-11xl: 2.75rem;
+    --font-size-12xl: 3rem;
+    --font-size-modal-number: 5rem;
+    --font-size-machine-status: 0.8rem;
+
+    --font-weight-normal: 500;
+    --font-weight-bold: 700;
+    --font-weight-heavy: 800;
+
+    --line-height-tight: 1;
+    --line-height-normal: 1.2;
+    --line-height-plan: 1.22;
+    --line-height-store: 1.25;
+    --line-height-comfy: 1.35;
+
+    --color-page: #efefef;
+    --color-surface: #ffffff;
+    --color-surface-muted: #f7f9fa;
+    --color-control-muted: #e6eaed;
+    --color-step-muted: #e8e8e8;
+    --color-panel-blue: #f4faff;
+    --color-panel-orange: #fff9f1;
+    --color-panel-red: #fff2f2;
+    --color-payment-guide: #f4f8fb;
+
+    --color-text: #333333;
+    --color-text-strong: #111111;
+    --color-text-muted: #6f6f6f;
+    --color-text-soft: #7a7a7a;
+    --color-text-disabled: #9aa6ae;
+    --color-heading: #34454f;
+    --color-label: #4b5862;
+    --color-payment-text: #2f3d47;
+    --color-busy-text: #6b4a1b;
+    --color-modal-subtitle: #555555;
+
+    --color-primary: #0f8dde;
+    --color-primary-soft: #3daeeb;
+    --color-primary-hover: #eef8ff;
+    --color-wash: #039dfd;
+    --color-dry: #dadada;
+    --color-dry-strong: #ff9100;
+    --color-dry-text: #e08700;
+    --color-danger: #d84b4b;
+    --color-danger-text: #c34b4b;
+    --color-busy-border: #f0b35f;
+
+    /* ===== Màu riêng cho card máy ở màn hình chính ===== */
+    /* Nhãn ở đầu card: 洗濯 / 乾燥 */
+    --machine-label-wash-bg: var(--color-wash);
+    --machine-label-dry-bg: var(--color-dry-strong);
+    --machine-label-text: var(--color-surface);
+
+    /* Máy giặt only: wash-only */
+    --machine-wash-available-bg: var(--color-surface);
+    --machine-wash-available-border: var(--color-primary);
+    --machine-wash-available-inner-border: var(--color-primary-soft);
+    --machine-wash-available-number: var(--color-text-strong);
+    --machine-wash-available-status: var(--color-text);
+    --machine-wash-busy-bg: var(--color-panel-orange);
+    --machine-wash-busy-border: var(--color-busy-border);
+    --machine-wash-busy-number: var(--color-text);
+    --machine-wash-busy-status: var(--color-busy-text);
+    --machine-wash-extend-bg: var(--color-panel-orange);
+    --machine-wash-extend-border: var(--color-busy-border);
+    --machine-wash-extend-number: var(--color-text);
+    --machine-wash-extend-status: var(--color-busy-text);
+    --machine-wash-extend-label: var(--color-dry-text);
+    --machine-wash-error-bg: var(--color-panel-red);
+    --machine-wash-error-border: var(--color-border-broken);
+    --machine-wash-error-number: var(--color-danger-text);
+    --machine-wash-error-status: var(--color-danger-text);
+
+    /* Máy sấy only: dry-only */
+    --machine-dry-available-bg: var(--color-surface);
+    --machine-dry-available-border: var(--color-primary);
+    --machine-dry-available-inner-border: var(--color-primary-soft);
+    --machine-dry-available-number: var(--color-text-strong);
+    --machine-dry-available-status: var(--color-text);
+    --machine-dry-busy-bg: var(--color-panel-orange);
+    --machine-dry-busy-border: var(--color-busy-border);
+    --machine-dry-busy-number: var(--color-text);
+    --machine-dry-busy-status: var(--color-busy-text);
+    --machine-dry-extend-bg: var(--color-panel-orange);
+    --machine-dry-extend-border: var(--color-busy-border);
+    --machine-dry-extend-number: var(--color-text);
+    --machine-dry-extend-status: var(--color-busy-text);
+    --machine-dry-extend-label: var(--color-dry-text);
+    --machine-dry-error-bg: var(--color-panel-red);
+    --machine-dry-error-border: var(--color-border-broken);
+    --machine-dry-error-number: var(--color-danger-text);
+    --machine-dry-error-status: var(--color-danger-text);
+
+    /* Máy giặt sấy: wash-dry */
+    --machine-wash-dry-available-bg: var(--color-surface);
+    --machine-wash-dry-available-border: var(--color-primary);
+    --machine-wash-dry-available-inner-border: var(--color-primary-soft);
+    --machine-wash-dry-available-number: var(--color-text-strong);
+    --machine-wash-dry-available-status: var(--color-text);
+    --machine-wash-dry-busy-bg: var(--color-panel-orange);
+    --machine-wash-dry-busy-border: var(--color-busy-border);
+    --machine-wash-dry-busy-number: var(--color-text);
+    --machine-wash-dry-busy-status: var(--color-busy-text);
+    --machine-wash-dry-extend-bg: var(--color-panel-orange);
+    --machine-wash-dry-extend-border: var(--color-busy-border);
+    --machine-wash-dry-extend-number: var(--color-text);
+    --machine-wash-dry-extend-status: var(--color-busy-text);
+    --machine-wash-dry-extend-label: var(--color-dry-text);
+    --machine-wash-dry-error-bg: var(--color-panel-red);
+    --machine-wash-dry-error-border: var(--color-border-broken);
+    --machine-wash-dry-error-number: var(--color-danger-text);
+    --machine-wash-dry-error-status: var(--color-danger-text);
+
+    --color-border-page: #d8d8d8;
+    --color-border-light: #d7dde1;
+    --color-border-machine: #cfd3d6;
+    --color-border-control: #8e9aa3;
+    --color-border-control-soft: #a0a7ac;
+    --color-border-card: #a7b0b5;
+    --color-border-card-divider: #b7bec3;
+    --color-border-pager: #dbdbdb;
+    --color-border-pager-active: #bfc7cc;
+    --color-border-header: #7f8a91;
+    --color-border-payment-guide: #c8d8e5;
+    --color-border-disabled: #c9d1d6;
+    --color-border-broken: #df8d8d;
+    --color-icon-muted: #b6b6b6;
+    --color-icon-active: #5e666b;
+    --color-overlay: rgba(0, 0, 0, 0.5);
+
+    --space-3xs: 0.125rem;
+    --space-2xs: 0.25rem;
+    --space-xs: 0.3125rem;
+    --space-sm: 0.375rem;
+    --space-md: 0.5rem;
+    --space-lg: 0.625rem;
+    --space-xl: 0.75rem;
+    --space-2xl: 0.875rem;
+    --space-3xl: 1rem;
+    --space-4xl: 1.125rem;
+    --space-5xl: 1.25rem;
+    --space-6xl: 1.375rem;
+    --space-7xl: 1.5rem;
+    --space-8xl: 1.625rem;
+    --space-9xl: 1.75rem;
+    --space-10xl: 2rem;
+    --space-modal-x: 2.5rem;
+    --space-course-top: 5.625rem;
+    --space-course-part-gap: 0.4rem;
+    --space-course-part-padding: 0.7rem;
+    --space-course-part-overlap: 0.15rem;
+
+    --border-width-thin: 0.0625rem;
+    --border-width-md: 0.125rem;
+    --border-width-strong: 0.1875rem;
+
+    --radius-card: 0.25rem;
+    --radius-round: 50%;
+    --radius-pill: 62.4375rem;
+
+    --size-step-height: 3.875rem;
+    --size-step-num: 2.375rem;
+    --size-button-width: 7.5rem;
+    --size-button-height: 2.875rem;
+    --size-side-column: 3.5rem;
+    --machine-grid-columns: 3;
+    --machine-grid-rows: 3;
+    --size-machine-label-height: 1.625rem;
+    --size-machine-label-slant: 0.625rem;
+    --size-pager-width: 3.125rem;
+    --size-pager-height: 4rem;
+    --size-badge: 5.375rem;
+    --size-course-card-width: 10.25rem;
+    --size-course-card-height: 9.9rem;
+    --size-course-label-height: 1.7rem;
+    --size-course-label-slant: 0.8rem;
+    --size-price-band-height: 2.75rem;
+    --size-price-band-slant: 1.125rem;
+    --size-plan-card-width: 13.75rem;
+    --size-plan-card-min-height: 10.625rem;
+    --size-plan-name-min-height: 5.5rem;
+    --size-payment-aside: 21.25rem;
+    --size-payment-min-height: 17.875rem;
+    --size-payment-label-width: 8.75rem;
+    --size-payment-button-min-width: 9.375rem;
+    --size-payment-button-height: 3.125rem;
+    --size-dry-button: 4.25rem;
+    --size-dry-display-min: 11rem;
+    --size-dry-confirm-min-width: 13rem;
+    --size-dry-confirm-height: 3.25rem;
+    --size-dry-panel-max: 32rem;
+    --size-complete-panel-max: 47.5rem;
+    --size-modal-min-width: 24rem;
+    --size-modal-number-height: 5rem;
+
+    --shadow-subtle: 0 0.0625rem 0 rgba(0, 0, 0, 0.08);
+    --shadow-card: 0 0.0625rem 0 rgba(0, 0, 0, 0.12);
+    --shadow-primary-inset: inset 0 0 0 0.0625rem var(--color-primary-soft), var(--shadow-card);
+    --shadow-highlight: inset 0 0 0 0.125rem var(--color-primary-soft), 0 0.125rem 0.375rem rgba(15, 141, 222, 0.18);
+    --shadow-modal: 0 0.25rem 1rem rgba(0, 0, 0, 0.2);
+    --shadow-back-overlay: 0 0.125rem 0.375rem rgba(15, 141, 222, 0.18);
+
+    --z-modal: 999;
+    --z-modal-back: 1002;
+}

@@ -1,0 +1,7 @@
+.machine-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--machine-grid-columns), minmax(0, 1fr));
+  grid-template-rows: repeat(var(--machine-grid-rows), minmax(0, 1fr));
+  gap: var(--space-xl);
+  height: 100%;
+}

@@ -1,0 +1,41 @@
+.plan-card {
+  width: var(--size-plan-card-width);
+  min-height: var(--size-plan-card-min-height);
+  background: var(--color-surface);
+  border: var(--border-width-strong) solid var(--color-border-card);
+  box-shadow: var(--shadow-subtle);
+  padding: var(--space-lg) var(--space-2xl) var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+
+.plan-card__name {
+  width: 100%;
+  text-align: center;
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-text-strong);
+  line-height: var(--line-height-plan);
+  min-height: var(--size-plan-name-min-height);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.plan-card__divider {
+  width: 100%;
+  border-top: var(--border-width-strong) solid var(--color-border-card-divider);
+  margin: var(--space-3xs) 0 var(--space-lg);
+}
+
+.plan-card__price {
+  font-size: var(--font-size-9xl);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-text-strong);
+  line-height: var(--line-height-tight);
+  white-space: nowrap;
+}

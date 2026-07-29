@@ -1,0 +1,6 @@
+.course-selection {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-9xl);
+  padding-top: var(--space-course-top);
+}
