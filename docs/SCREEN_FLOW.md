@@ -106,8 +106,8 @@ Back:
 - Nếu modal đang mở: đóng modal.
 - Từ `course`: về page máy của `selectedMachine`.
 - Từ `plan`:
-  - Nếu máy `wash-dry` và không extension: về `course`.
-  - Nếu máy không cần course select: về page máy của `selectedMachine`.
+    - Nếu máy `wash-dry` và không extension: về `course`.
+    - Nếu máy không cần course select: về page máy của `selectedMachine`.
 - Từ `payment`: về `plan`.
 - Từ `settings` sub page: về settings menu.
 - Từ `settings-pin` hoặc settings menu: reset về `machine-1`.

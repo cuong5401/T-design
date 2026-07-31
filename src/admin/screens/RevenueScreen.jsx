@@ -26,9 +26,9 @@ export default function RevenueScreen() {
     setSort((current) => ({ key, direction: current.key === key && current.direction === "desc" ? "asc" : "desc" }));
   };
 
-  const handleCsv = () => {
-    csvExportService.downloadRevenueCsv(sortedRows);
-    setMessage("CSVファイルを保存しました。");
+  const handleCsv = async () => {
+    const result = await csvExportService.downloadRevenueCsv(sortedRows);
+    setMessage(`CSV保存を実行しました。（mock: ${result.rowCount}件）`);
   };
 
   return (

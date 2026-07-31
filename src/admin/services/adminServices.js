@@ -149,29 +149,7 @@ export const revenueService = {
 
 export const csvExportService = {
   downloadRevenueCsv(displayedData) {
-    const header = ["区分", "日時", "金額", "実行機器", "実行内容"];
-    const lines = displayedData.map((row) => [
-      row.source === "controller" ? "本機" : "ランドリー機",
-      row.dateTime,
-      row.amount,
-      `${row.machineNumber}号機`,
-      row.action
-    ]);
-    const csvText = [header, ...lines]
-      .map((columns) => columns.map((value) => `"${String(value).replaceAll('"', '""')}"`).join(","))
-      .join("\r\n");
-    const now = new Date();
-    const stamp = `${now.getFullYear()}${formatDatePart(now.getMonth() + 1)}${formatDatePart(now.getDate())}_${formatDatePart(now.getHours())}${formatDatePart(now.getMinutes())}${formatDatePart(now.getSeconds())}`;
-    const blob = new Blob(["\ufeff", csvText], { type: "text/csv;charset=utf-8" });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = `回収金額_${stamp}.csv`;
-    document.body.appendChild(link);
-    link.click();
-    link.remove();
-    URL.revokeObjectURL(url);
-    return { ok: true };
+    return mockDelay({ ok: true, rowCount: displayedData.length });
   }
 };
 

@@ -80,11 +80,9 @@ export function AdminMenu({ onOpen }) {
 
   return (
     <section className="settings-mode settings-mode--menu">
-      <h2 className="settings-mode__title">設定メニュー</h2>
       <div className="settings-mode__tiles">
         {items.map((item) => (
           <button className={`settings-mode__tile settings-mode__tile--${item.tone}`} type="button" key={item.id} onClick={() => onOpen(item.id)}>
-            <span className="settings-mode__mark" aria-hidden="true">{item.mark}</span>
             <span className="settings-mode__label">{item.label}</span>
           </button>
         ))}
