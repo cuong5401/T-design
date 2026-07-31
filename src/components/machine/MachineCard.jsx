@@ -1,13 +1,25 @@
 import { useCallback, useRef } from "react";
 import { canExtendMachine, canSelectMachine } from "../../data/machines";
 import { useLongPress } from "../../hooks/useLongPress";
+import { LaundryTypeIcon } from "../icons/LaundryTypeIcon";
 import "./MachineCard.css";
+
+function MachineLabel({ type, single = false }) {
+  const label = type === "dry" ? "乾燥" : "洗濯";
+
+  return (
+    <div className={`machine-card__label machine-card__label--${type}${single ? " machine-card__label--single" : ""}`}>
+      <LaundryTypeIcon className="machine-card__label-icon" type={type} />
+      <span>{label}</span>
+    </div>
+  );
+}
 
 function MachineLabels({ type }) {
   if (type === "wash-only") {
     return (
       <div className="machine-card__labels">
-        <div className="machine-card__label machine-card__label--wash machine-card__label--single">洗濯</div>
+        <MachineLabel type="wash" single />
       </div>
     );
   }
@@ -15,15 +27,15 @@ function MachineLabels({ type }) {
   if (type === "dry-only") {
     return (
       <div className="machine-card__labels">
-        <div className="machine-card__label machine-card__label--dry machine-card__label--single">乾燥</div>
+        <MachineLabel type="dry" single />
       </div>
     );
   }
 
   return (
     <div className="machine-card__labels">
-      <div className="machine-card__label machine-card__label--wash">洗濯</div>
-      <div className="machine-card__label machine-card__label--dry">乾燥</div>
+      <MachineLabel type="wash" />
+      <MachineLabel type="dry" />
     </div>
   );
 }

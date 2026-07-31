@@ -4,7 +4,7 @@
 }
 
 html {
-  font-size: var(--font-size-root);
+  font-size: 20px;
 }
 
 html,
@@ -17,9 +17,9 @@ body,
 
 body {
   margin: 0;
-  font-family: var(--font-family-base);
-  background: var(--color-page);
-  color: var(--color-text);
+  font-family: Arial, Helvetica, sans-serif;
+  background: #efefef;
+  color: #333333;
 }
 
 button {

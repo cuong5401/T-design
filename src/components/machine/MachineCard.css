@@ -1,27 +1,27 @@
 .machine-card {
-  --machine-card-available-bg: var(--machine-wash-dry-available-bg);
-  --machine-card-available-border: var(--machine-wash-dry-available-border);
-  --machine-card-available-inner-border: var(--machine-wash-dry-available-inner-border);
-  --machine-card-available-number: var(--machine-wash-dry-available-number);
-  --machine-card-available-status: var(--machine-wash-dry-available-status);
-  --machine-card-busy-bg: var(--machine-wash-dry-busy-bg);
-  --machine-card-busy-border: var(--machine-wash-dry-busy-border);
-  --machine-card-busy-number: var(--machine-wash-dry-busy-number);
-  --machine-card-busy-status: var(--machine-wash-dry-busy-status);
-  --machine-card-extend-bg: var(--machine-wash-dry-extend-bg);
-  --machine-card-extend-border: var(--machine-wash-dry-extend-border);
-  --machine-card-extend-number: var(--machine-wash-dry-extend-number);
-  --machine-card-extend-status: var(--machine-wash-dry-extend-status);
-  --machine-card-extend-label: var(--machine-wash-dry-extend-label);
-  --machine-card-error-bg: var(--machine-wash-dry-error-bg);
-  --machine-card-error-border: var(--machine-wash-dry-error-border);
-  --machine-card-error-number: var(--machine-wash-dry-error-number);
-  --machine-card-error-status: var(--machine-wash-dry-error-status);
+  --machine-card-available-bg: #ffffff;
+  --machine-card-available-border: #0f8dde;
+  --machine-card-available-inner-border: #3daeeb;
+  --machine-card-available-number: #111111;
+  --machine-card-available-status: #333333;
+  --machine-card-busy-bg: #fff9f1;
+  --machine-card-busy-border: #f0b35f;
+  --machine-card-busy-number: #333333;
+  --machine-card-busy-status: #6b4a1b;
+  --machine-card-extend-bg: #fff9f1;
+  --machine-card-extend-border: #f0b35f;
+  --machine-card-extend-number: #333333;
+  --machine-card-extend-status: #6b4a1b;
+  --machine-card-extend-label: #e08700;
+  --machine-card-error-bg: #fff2f2;
+  --machine-card-error-border: #df8d8d;
+  --machine-card-error-number: #c34b4b;
+  --machine-card-error-status: #c34b4b;
   height: auto;
   min-height: 0;
-  background: var(--color-surface);
-  border: var(--border-width-md) solid var(--color-border-machine);
-  box-shadow: var(--shadow-card);
+  background: #ffffff;
+  border: 0.125rem solid #cfd3d6;
+  box-shadow: 0 0.0625rem 0 rgba(0, 0, 0, 0.12);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -30,80 +30,80 @@
 }
 
 .machine-card--wash-only {
-  --machine-card-available-bg: var(--machine-wash-available-bg);
-  --machine-card-available-border: var(--machine-wash-available-border);
-  --machine-card-available-inner-border: var(--machine-wash-available-inner-border);
-  --machine-card-available-number: var(--machine-wash-available-number);
-  --machine-card-available-status: var(--machine-wash-available-status);
-  --machine-card-busy-bg: var(--machine-wash-busy-bg);
-  --machine-card-busy-border: var(--machine-wash-busy-border);
-  --machine-card-busy-number: var(--machine-wash-busy-number);
-  --machine-card-busy-status: var(--machine-wash-busy-status);
-  --machine-card-extend-bg: var(--machine-wash-extend-bg);
-  --machine-card-extend-border: var(--machine-wash-extend-border);
-  --machine-card-extend-number: var(--machine-wash-extend-number);
-  --machine-card-extend-status: var(--machine-wash-extend-status);
-  --machine-card-extend-label: var(--machine-wash-extend-label);
-  --machine-card-error-bg: var(--machine-wash-error-bg);
-  --machine-card-error-border: var(--machine-wash-error-border);
-  --machine-card-error-number: var(--machine-wash-error-number);
-  --machine-card-error-status: var(--machine-wash-error-status);
+  --machine-card-available-bg: #ffffff;
+  --machine-card-available-border: #0f8dde;
+  --machine-card-available-inner-border: #3daeeb;
+  --machine-card-available-number: #111111;
+  --machine-card-available-status: #333333;
+  --machine-card-busy-bg: #fff9f1;
+  --machine-card-busy-border: #f0b35f;
+  --machine-card-busy-number: #333333;
+  --machine-card-busy-status: #6b4a1b;
+  --machine-card-extend-bg: #fff9f1;
+  --machine-card-extend-border: #f0b35f;
+  --machine-card-extend-number: #333333;
+  --machine-card-extend-status: #6b4a1b;
+  --machine-card-extend-label: #e08700;
+  --machine-card-error-bg: #fff2f2;
+  --machine-card-error-border: #df8d8d;
+  --machine-card-error-number: #c34b4b;
+  --machine-card-error-status: #c34b4b;
 }
 
 .machine-card--dry-only {
-  --machine-card-available-bg: var(--machine-dry-available-bg);
-  --machine-card-available-border: var(--machine-dry-available-border);
-  --machine-card-available-inner-border: var(--machine-dry-available-inner-border);
-  --machine-card-available-number: var(--machine-dry-available-number);
-  --machine-card-available-status: var(--machine-dry-available-status);
-  --machine-card-busy-bg: var(--machine-dry-busy-bg);
-  --machine-card-busy-border: var(--machine-dry-busy-border);
-  --machine-card-busy-number: var(--machine-dry-busy-number);
-  --machine-card-busy-status: var(--machine-dry-busy-status);
-  --machine-card-extend-bg: var(--machine-dry-extend-bg);
-  --machine-card-extend-border: var(--machine-dry-extend-border);
-  --machine-card-extend-number: var(--machine-dry-extend-number);
-  --machine-card-extend-status: var(--machine-dry-extend-status);
-  --machine-card-extend-label: var(--machine-dry-extend-label);
-  --machine-card-error-bg: var(--machine-dry-error-bg);
-  --machine-card-error-border: var(--machine-dry-error-border);
-  --machine-card-error-number: var(--machine-dry-error-number);
-  --machine-card-error-status: var(--machine-dry-error-status);
+  --machine-card-available-bg: #ffffff;
+  --machine-card-available-border: #0f8dde;
+  --machine-card-available-inner-border: #3daeeb;
+  --machine-card-available-number: #111111;
+  --machine-card-available-status: #333333;
+  --machine-card-busy-bg: #fff9f1;
+  --machine-card-busy-border: #f0b35f;
+  --machine-card-busy-number: #333333;
+  --machine-card-busy-status: #6b4a1b;
+  --machine-card-extend-bg: #fff9f1;
+  --machine-card-extend-border: #f0b35f;
+  --machine-card-extend-number: #333333;
+  --machine-card-extend-status: #6b4a1b;
+  --machine-card-extend-label: #e08700;
+  --machine-card-error-bg: #fff2f2;
+  --machine-card-error-border: #df8d8d;
+  --machine-card-error-number: #c34b4b;
+  --machine-card-error-status: #c34b4b;
 }
 
 .machine-card--wash-dry {
-  --machine-card-available-bg: var(--machine-wash-dry-available-bg);
-  --machine-card-available-border: var(--machine-wash-dry-available-border);
-  --machine-card-available-inner-border: var(--machine-wash-dry-available-inner-border);
-  --machine-card-available-number: var(--machine-wash-dry-available-number);
-  --machine-card-available-status: var(--machine-wash-dry-available-status);
-  --machine-card-busy-bg: var(--machine-wash-dry-busy-bg);
-  --machine-card-busy-border: var(--machine-wash-dry-busy-border);
-  --machine-card-busy-number: var(--machine-wash-dry-busy-number);
-  --machine-card-busy-status: var(--machine-wash-dry-busy-status);
-  --machine-card-extend-bg: var(--machine-wash-dry-extend-bg);
-  --machine-card-extend-border: var(--machine-wash-dry-extend-border);
-  --machine-card-extend-number: var(--machine-wash-dry-extend-number);
-  --machine-card-extend-status: var(--machine-wash-dry-extend-status);
-  --machine-card-extend-label: var(--machine-wash-dry-extend-label);
-  --machine-card-error-bg: var(--machine-wash-dry-error-bg);
-  --machine-card-error-border: var(--machine-wash-dry-error-border);
-  --machine-card-error-number: var(--machine-wash-dry-error-number);
-  --machine-card-error-status: var(--machine-wash-dry-error-status);
+  --machine-card-available-bg: #ffffff;
+  --machine-card-available-border: #0f8dde;
+  --machine-card-available-inner-border: #3daeeb;
+  --machine-card-available-number: #111111;
+  --machine-card-available-status: #333333;
+  --machine-card-busy-bg: #fff9f1;
+  --machine-card-busy-border: #f0b35f;
+  --machine-card-busy-number: #333333;
+  --machine-card-busy-status: #6b4a1b;
+  --machine-card-extend-bg: #fff9f1;
+  --machine-card-extend-border: #f0b35f;
+  --machine-card-extend-number: #333333;
+  --machine-card-extend-status: #6b4a1b;
+  --machine-card-extend-label: #e08700;
+  --machine-card-error-bg: #fff2f2;
+  --machine-card-error-border: #df8d8d;
+  --machine-card-error-number: #c34b4b;
+  --machine-card-error-status: #c34b4b;
 }
 
 .machine-card--available {
   background: var(--machine-card-available-bg);
   border-color: var(--machine-card-available-border);
-  box-shadow: inset 0 0 0 var(--border-width-thin) var(--machine-card-available-inner-border), var(--shadow-card);
+  box-shadow: inset 0 0 0 0.0625rem var(--machine-card-available-inner-border), 0 0.0625rem 0 rgba(0, 0, 0, 0.12);
   cursor: pointer;
 }
 
 .machine-card--busy {
   background: var(--machine-card-busy-bg);
-  color: var(--color-text);
+  color: #333333;
   border-color: var(--machine-card-busy-border);
-  box-shadow: var(--shadow-subtle);
+  box-shadow: 0 0.0625rem 0 rgba(0, 0, 0, 0.08);
   opacity: 1;
 }
 
@@ -133,10 +133,10 @@
 
 .machine-card__labels {
   display: flex;
-  height: var(--size-machine-label-height);
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-bold);
-  color: var(--machine-label-text);
+  height: 1.625rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: #ffffff;
 }
 
 .machine-card__label {
@@ -145,23 +145,29 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: var(--space-xs);
+  gap: 0.3125rem;
   overflow: hidden;
 }
 
+.machine-card__label-icon {
+  width: 0.95rem;
+  height: 0.95rem;
+  flex: 0 0 auto;
+}
+
 .machine-card__label--wash {
-  background: var(--machine-label-wash-bg);
-  clip-path: polygon(0 0, 100% 0, calc(100% - var(--size-machine-label-slant)) 100%, 0 100%);
-  margin-right: calc(var(--space-3xs) * -1);
-  padding-right: var(--space-md);
+  background: #039dfd;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 0.625rem) 100%, 0 100%);
+  margin-right: calc(0.125rem * -1);
+  padding-right: 0.5rem;
   z-index: 2;
 }
 
 .machine-card__label--dry {
-  background: var(--machine-label-dry-bg);
-  clip-path: polygon(var(--size-machine-label-slant) 0, 100% 0, 100% 100%, 0 100%);
-  margin-left: calc(var(--space-3xs) * -1);
-  padding-left: var(--space-md);
+  background: #ff9100;
+  clip-path: polygon(0.625rem 0, 100% 0, 100% 100%, 0 100%);
+  margin-left: calc(0.125rem * -1);
+  padding-left: 0.5rem;
 }
 
 .machine-card__label--single {
@@ -172,10 +178,10 @@
 
 .machine-card__number {
   text-align: center;
-  font-size: var(--font-size-10xl);
-  font-weight: var(--font-weight-heavy);
-  margin-top: var(--space-xl);
-  line-height: var(--line-height-tight);
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-top: 0.75rem;
+  line-height: 1;
   color: var(--machine-card-available-number);
 }
 
@@ -197,9 +203,9 @@
 
 .machine-card__status {
   text-align: center;
-  margin-top: var(--space-lg);
-  font-size: var(--font-size-machine-status);
-  font-weight: var(--font-weight-bold);
+  margin-top: 0.625rem;
+  font-size: 0.8rem;
+  font-weight: 700;
   color: var(--machine-card-available-status);
 }
 
@@ -213,13 +219,13 @@
 
 .machine-card--broken .machine-card__status {
   color: var(--machine-card-error-status);
-  font-weight: var(--font-weight-heavy);
+  font-weight: 800;
 }
 
 .machine-card__extend {
   text-align: center;
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
+  font-size: 0.75rem;
+  font-weight: 700;
   color: var(--machine-card-extend-label);
-  margin-top: var(--space-3xs);
+  margin-top: 0.125rem;
 }

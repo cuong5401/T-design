@@ -10,6 +10,14 @@ function getTitle(screen, isExtension) {
     return "運転開始";
   }
 
+  if (screen === "settings-pin") {
+    return "設定PINを入力してください";
+  }
+
+  if (screen === "settings") {
+    return "設定モード";
+  }
+
   if (screen === "course" || screen === "plan") {
     return isExtension ? "延長時間を選択してください" : "コースを選択してください";
   }
@@ -20,7 +28,7 @@ function getTitle(screen, isExtension) {
 export default function ScreenHeader({ screen, selectedMachine, isExtension }) {
   const title = getTitle(screen, isExtension);
 
-  if (isMachineScreen(screen)) {
+  if (isMachineScreen(screen) || screen === "settings-pin" || screen === "settings") {
     return <div className="screen-header__title">{title}</div>;
   }
 

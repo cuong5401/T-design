@@ -11,17 +11,34 @@ export default function AppShell({
   isExtension,
   contentMode,
   showFooter = true,
+  showFooterCancel = true,
   footerDisabled,
+  hideProgress = false,
   onBack,
   onCancel,
+  onStepOneLongPress,
   children
 }) {
   return (
     <div className="app-shell">
-      <ProgressHeader clockText={clockText} currentStep={progressStep} storeName="ランドリー和田野店" />
+      {!hideProgress && (
+        <ProgressHeader
+          clockText={clockText}
+          currentStep={progressStep}
+          storeName="ランドリー和田野店"
+          onStepOneLongPress={onStepOneLongPress}
+        />
+      )}
       <ScreenHeader screen={screen} selectedMachine={selectedMachine} isExtension={isExtension} />
       <main className={`app-shell__content app-shell__content--${contentMode}`}>{children}</main>
-      {showFooter && <FooterNavigation disabled={footerDisabled} onBack={onBack} onCancel={onCancel} />}
+      {showFooter && (
+        <FooterNavigation
+          disabled={footerDisabled}
+          showCancel={showFooterCancel}
+          onBack={onBack}
+          onCancel={onCancel}
+        />
+      )}
     </div>
   );
 }

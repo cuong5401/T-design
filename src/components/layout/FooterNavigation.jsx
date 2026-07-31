@@ -1,18 +1,20 @@
 import "./FooterNavigation.css";
 
-export default function FooterNavigation({ disabled, onBack, onCancel }) {
+export default function FooterNavigation({ disabled, onBack, onCancel, showCancel = true }) {
   return (
     <footer className="footer-navigation">
-      <button className="footer-navigation__button" type="button" disabled={disabled} onClick={onBack}>
+      {showCancel && (
+        <button
+          className="footer-navigation__button footer-navigation__button--cancel"
+          type="button"
+          disabled={disabled}
+          onClick={onCancel}
+        >
+          中止
+        </button>
+      )}
+      <button className="footer-navigation__button footer-navigation__button--back" type="button" disabled={disabled} onClick={onBack}>
         戻る
-      </button>
-      <button
-        className="footer-navigation__button footer-navigation__button--cancel"
-        type="button"
-        disabled={disabled}
-        onClick={onCancel}
-      >
-        中止
       </button>
     </footer>
   );

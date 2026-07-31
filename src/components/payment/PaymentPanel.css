@@ -1,55 +1,56 @@
 .payment-panel {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) var(--size-payment-aside);
-  gap: var(--space-4xl);
+  grid-template-columns: minmax(0, 1fr) 18.75rem;
+  gap: 1rem;
   align-items: stretch;
-  margin-top: var(--space-xl);
+  width: min(100%, 52rem);
+  margin: 0.75rem auto 0;
 }
 
 .payment-panel__summary,
 .payment-panel__card {
-  min-height: var(--size-payment-min-height);
-  border-radius: var(--radius-card);
-  background: var(--color-surface);
-  border: var(--border-width-strong) solid var(--color-border-card);
-  box-shadow: var(--shadow-subtle);
+  min-height: 15.75rem;
+  border-radius: 0.25rem;
+  background: #ffffff;
+  border: 0.1875rem solid #a7b0b5;
+  box-shadow: 0 0.0625rem 0 rgba(0, 0, 0, 0.08);
 }
 
 .payment-panel__summary {
   width: 100%;
   margin: 0;
-  padding: var(--space-4xl) var(--space-5xl);
+  padding: 0.75rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .payment-panel__card {
-  padding: var(--space-3xl);
+  padding: 0.8rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
 .payment-panel__card--inserted {
-  border-color: var(--color-primary);
-  background: var(--color-panel-blue);
+  border-color: #0f8dde;
+  background: #f4faff;
 }
 
 .payment-panel__card-title {
-  font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-heavy);
-  color: var(--color-heading);
-  margin-bottom: var(--space-2xl);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #34454f;
+  margin-bottom: 0.65rem;
   text-align: center;
 }
 
 .payment-panel__row {
   display: flex;
   align-items: center;
-  border-bottom: var(--border-width-md) solid var(--color-border-light);
-  padding: var(--space-2xl) 0;
-  gap: var(--space-xl);
+  border-bottom: 0.125rem solid #d7dde1;
+  padding: 0.65rem 0;
+  gap: 0.75rem;
 }
 
 .payment-panel__row:last-of-type {
@@ -57,76 +58,76 @@
 }
 
 .payment-panel__label {
-  flex: 0 0 var(--size-payment-label-width);
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-label);
+  flex: 0 0 7.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #4b5862;
 }
 
 .payment-panel__value {
-  font-size: var(--font-size-6xl);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-text-strong);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #111111;
 }
 
 .payment-panel__value--price {
-  color: var(--color-primary);
+  color: #0f8dde;
 }
 
 .payment-panel__guide {
   margin-top: 0;
-  padding: var(--space-4xl) var(--space-2xl);
-  background: var(--color-payment-guide);
-  border: var(--border-width-md) solid var(--color-border-payment-guide);
-  font-size: var(--font-size-3xl);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-payment-text);
+  padding: 0.85rem 0.75rem;
+  background: #f4f8fb;
+  border: 0.125rem solid #c8d8e5;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #2f3d47;
   text-align: center;
-  line-height: var(--line-height-comfy);
+  line-height: 1.35;
   cursor: pointer;
 }
 
 .payment-panel__note {
-  margin-top: var(--space-2xl);
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-label);
+  margin-top: 0.7rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #4b5862;
   text-align: center;
 }
 
 .payment-panel__balance {
-  margin-top: var(--space-3xl);
-  font-size: var(--font-size-5xl);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-primary);
+  margin-top: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f8dde;
   text-align: center;
 }
 
 .payment-panel__actions {
   display: flex;
   justify-content: center;
-  gap: var(--space-2xl);
-  margin-top: var(--space-2xl);
+  gap: 0.875rem;
+  margin-top: 0.65rem;
 }
 
 .payment-panel__button {
-  min-width: var(--size-payment-button-min-width);
-  height: var(--size-payment-button-height);
-  border: var(--border-width-md) solid var(--color-border-control);
-  background: var(--color-surface);
-  color: var(--color-payment-text);
-  font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-heavy);
+  min-width: 7.75rem;
+  height: 2.75rem;
+  border: 0.125rem solid #8e9aa3;
+  background: #ffffff;
+  color: #2f3d47;
+  font-size: 1.1rem;
+  font-weight: 800;
   cursor: pointer;
-  box-shadow: var(--shadow-subtle);
+  box-shadow: 0 0.0625rem 0 rgba(0, 0, 0, 0.08);
 }
 
 .payment-panel__button--yes {
-  border-color: var(--color-primary);
-  color: var(--color-primary);
+  border-color: #0f8dde;
+  color: #0f8dde;
 }
 
 .payment-panel__button--no {
-  border-color: var(--color-border-control-soft);
-  color: var(--color-label);
+  border-color: #a0a7ac;
+  color: #4b5862;
 }

@@ -1,8 +1,8 @@
 .plan-selection {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(var(--size-plan-card-width), var(--size-plan-card-width)));
-  gap: var(--space-6xl) var(--space-2xl);
-  justify-content: start;
+  grid-template-columns: repeat(auto-fit, minmax(13.75rem, 13.75rem));
+  gap: 1.375rem 0.875rem;
+  justify-content: center;
   align-content: start;
-  padding-top: var(--space-4xl);
+  padding-top: 1.125rem;
 }

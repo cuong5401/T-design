@@ -7,11 +7,11 @@ function pad(value) {
 export function formatClock(date) {
   const year = date.getFullYear();
   const month = pad(date.getMonth() + 1);
-  const dayOfMonth = date.getDate();
+  const dayOfMonth = pad(date.getDate());
   const dayName = WEEKDAYS[date.getDay()];
   const hour = pad(date.getHours());
   const minute = pad(date.getMinutes());
   const second = pad(date.getSeconds());
 
-  return `${year}/${month}/${dayOfMonth}(${dayName}) ${hour}:${minute}:${second}`;
+  return `${year}/${month}/${dayOfMonth}(${dayName})\n${hour}:${minute}:${second}`;
 }

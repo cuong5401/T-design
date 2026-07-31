@@ -12,6 +12,9 @@ export const initialState = {
   remainingBalance: null,
   completeMode: "start",
   isExtension: false,
+  settingsPin: "",
+  settingsPinError: "",
+  settingsPage: null,
   modal: {
     type: null,
     machineNumber: null,

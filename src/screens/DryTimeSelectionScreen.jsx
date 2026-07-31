@@ -34,7 +34,7 @@ export default function DryTimeSelectionScreen({ state, dispatch }) {
             ＋
           </button>
         </div>
-        <div className="dry-time__note">８分ごとに１００円です。最大４０分まで選択できます。</div>
+        <div className="dry-time__note">8分ごとに100円です。最大40分まで選択できます。</div>
         <button className="dry-time__confirm" type="button" onClick={() => dispatch({ type: "CONFIRM_DRY_TIME" })}>
           この時間で支払う
         </button>

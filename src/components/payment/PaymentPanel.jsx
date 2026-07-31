@@ -52,7 +52,7 @@ export default function PaymentPanel({ state, onInsertCard, onDecision }) {
 
           {state.cardInserted ? (
             <>
-              <div className="payment-panel__balance">カード残高: {formatCurrency(PREPAID_CARD_BALANCE)}</div>
+              <div className="payment-panel__balance">カード残高 {formatCurrency(PREPAID_CARD_BALANCE)}</div>
               <div className="payment-panel__actions">
                 <button className="payment-panel__button payment-panel__button--yes" type="button" onClick={() => onDecision("yes")}>
                   支払う

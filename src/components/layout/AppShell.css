@@ -2,11 +2,11 @@
   width: 100%;
   height: 100%;
   margin: 0;
-  background: var(--color-page);
+  background: #efefef;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  border: var(--border-width-thin) solid var(--color-border-page);
+  border: 0.0625rem solid #d8d8d8;
 }
 
 .app-shell__content {
@@ -17,21 +17,30 @@
 
 .app-shell__content--machine {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) var(--size-side-column);
-  gap: var(--space-2xl);
-  padding: var(--space-lg) var(--space-xl);
+  grid-template-columns: minmax(0, 1fr) 3.5rem;
+  gap: 0.875rem;
+  padding: 0.625rem 0.75rem;
   align-items: stretch;
 }
 
 .app-shell__content--course,
 .app-shell__content--payment,
-.app-shell__content--complete {
+.app-shell__content--complete,
+.app-shell__content--settings {
   display: block;
-  padding: var(--space-7xl) var(--space-5xl) var(--space-lg);
+  padding: 1.5rem 1.25rem 0.625rem;
   min-height: 0;
   height: 100%;
   overflow: hidden;
-  background: var(--color-page);
+  background: #efefef;
+}
+
+.app-shell__content--payment {
+  padding-top: 1.1rem;
+}
+
+.app-shell__content--settings {
+  padding-top: 0.75rem;
 }
 
 .app-shell__main,

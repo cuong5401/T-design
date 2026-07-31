@@ -4,11 +4,6 @@ export default function BaseModal({ title, machineNumber, subtitle, confirmLabel
   return (
     <div className="base-modal__overlay" role="dialog" aria-modal="true" aria-labelledby="base-modal-title">
       <div className="base-modal__box">
-        <div className="base-modal__toolbar">
-          <button className="base-modal__back" type="button" onClick={onBack}>
-            戻る
-          </button>
-        </div>
         <div className="base-modal__title" id="base-modal-title">
           {title}
         </div>
@@ -21,6 +16,9 @@ export default function BaseModal({ title, machineNumber, subtitle, confirmLabel
             onClick={onConfirm}
           >
             {confirmLabel}
+          </button>
+          <button className="base-modal__back" type="button" onClick={onBack}>
+            戻る
           </button>
         </div>
       </div>

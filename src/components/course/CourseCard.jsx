@@ -1,4 +1,5 @@
 import { COURSE_PART_LABELS } from "../../data/courses";
+import { LaundryTypeIcon } from "../icons/LaundryTypeIcon";
 import "./CourseCard.css";
 
 export function CourseBand({ parts, className = "" }) {
@@ -8,6 +9,7 @@ export function CourseBand({ parts, className = "" }) {
     <div className={`course-band${isSingle ? " course-band--single" : ""}${className ? ` ${className}` : ""}`}>
       {parts.map((part) => (
         <div className={`course-band__part course-band__part--${part}`} key={part}>
+          <LaundryTypeIcon className="course-band__icon" type={part} />
           <span>{COURSE_PART_LABELS[part]}</span>
         </div>
       ))}

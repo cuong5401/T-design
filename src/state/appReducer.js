@@ -57,6 +57,9 @@ function resetToMachineScreen(state, screen = "machine-1") {
       remainingBalance: null,
       completeMode: "start",
       isExtension: false,
+      settingsPin: "",
+      settingsPinError: "",
+      settingsPage: null,
       modal: {
         type: null,
         machineNumber: null,
@@ -109,6 +112,9 @@ function startCourseFlow(state, machineNumber, isExtension) {
       remainingBalance: null,
       completeMode: "start",
       isExtension: Boolean(isExtension),
+      settingsPin: "",
+      settingsPinError: "",
+      settingsPage: null,
       modal: {
         type: null,
         machineNumber: null,
@@ -288,9 +294,101 @@ export function appReducer(state, action) {
       };
     }
 
+    case "OPEN_SETTINGS_PIN": {
+      return withScreen(
+        {
+          ...state,
+          selectedMachine: null,
+          selectedCourse: null,
+          selectedPlan: null,
+          paymentPrice: 0,
+          cardInserted: false,
+          remainingBalance: null,
+          settingsPin: "",
+          settingsPinError: "",
+          settingsPage: null
+        },
+        "settings-pin"
+      );
+    }
+
+    case "SETTINGS_ACCESS_DENIED": {
+      return {
+        ...state,
+        settingsPin: "",
+        settingsPinError: "設定モードに入れません。"
+      };
+    }
+
+    case "APPEND_SETTINGS_PIN_DIGIT": {
+      if (state.screen !== "settings-pin" || !/^\d$/.test(action.digit) || state.settingsPin.length >= 4) {
+        return state;
+      }
+
+      return {
+        ...state,
+        settingsPin: `${state.settingsPin}${action.digit}`,
+        settingsPinError: ""
+      };
+    }
+
+    case "DELETE_SETTINGS_PIN_DIGIT": {
+      if (state.screen !== "settings-pin") {
+        return state;
+      }
+
+      return {
+        ...state,
+        settingsPin: state.settingsPin.slice(0, -1),
+        settingsPinError: ""
+      };
+    }
+
+    case "SETTINGS_PIN_VALID": {
+      return withScreen(
+        {
+          ...state,
+          settingsPin: "",
+          settingsPinError: "",
+          settingsPage: null
+        },
+        "settings"
+      );
+    }
+
+    case "SETTINGS_PIN_INVALID": {
+      return {
+        ...resetToMachineScreen(state),
+        settingsPinError: "暗証番号が違います。"
+      };
+    }
+
+    case "EXIT_SETTINGS": {
+      return resetToMachineScreen(state);
+    }
+
+    case "OPEN_SETTINGS_PAGE": {
+      if (state.screen !== "settings") {
+        return state;
+      }
+
+      return {
+        ...state,
+        settingsPage: action.page
+      };
+    }
+
     case "PAYMENT_DECISION": {
       if (action.decision !== "yes") {
-        return resetToMachineScreen(state);
+        return withScreen(
+          {
+            ...state,
+            cardInserted: false,
+            remainingBalance: null,
+            completeMode: "failed"
+          },
+          "complete"
+        );
       }
 
       if (!state.selectedMachine || !state.selectedPlan) {
@@ -376,10 +474,25 @@ export function appReducer(state, action) {
         );
       }
 
+      if (state.screen === "settings" && state.settingsPage) {
+        return {
+          ...state,
+          settingsPage: null
+        };
+      }
+
+      if (state.screen === "settings-pin" || state.screen === "settings") {
+        return resetToMachineScreen(state);
+      }
+
       return state;
     }
 
     case "CANCEL": {
+      if (state.screen === "settings-pin" || state.screen === "settings") {
+        return resetToMachineScreen(state);
+      }
+
       if (isMachineScreen(state.screen) || state.screen === "complete") {
         return state;
       }
